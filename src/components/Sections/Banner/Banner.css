@@ -1,0 +1,15 @@
+.banner {
+  outline: 1px solid rgb(132, 0, 0);
+  padding: 20px;
+  background-image: linear-gradient(to right, rgb(137, 0, 21), black);
+  color: rgba(230, 230, 230, 1);
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  flex: 1;
+  width: calc(100% - 40px);
+}
+
+#acacia {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
