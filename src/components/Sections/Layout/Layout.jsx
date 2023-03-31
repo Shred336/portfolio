@@ -25,6 +25,7 @@ const Layout = () => {
           <NavItem to="/settings">Settings</NavItem>
           <NavItem to="/quoz">Quotes</NavItem>
           <NavItem to="/podapp">PodApp</NavItem>
+          <NavItem to="/flashcards">FlashCards</NavItem>
         </Container>
       </nav>
 

@@ -16,6 +16,7 @@ import Receipts from "../pages/Receipts";
 import Fibonacci from "../pages/Fibonacci";
 import Quotes from "../pages/Quoz";
 import PodApp from "../pages/Podapp";
+import FlashCards from "../pages/FlashCards";
 function App() {
   return (
     <BrowserRouter>
@@ -37,6 +38,7 @@ function App() {
             <Route path="fibonacci" element={<Fibonacci />} />
             <Route path="quoz" element={<Quotes />} />
             <Route path="podapp" element={<PodApp />} />
+            <Route path="flashcards" element={<FlashCards />} />
 
             {/* <Route path="contact" element={<Contact />} />
             <Route path="*" element={<NoPage />} /> */}

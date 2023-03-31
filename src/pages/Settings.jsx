@@ -9,7 +9,6 @@ const Settings = () => {
   const settingsExample = [
     { desc: "Dark Mode", enabled: false },
     { desc: "Other Setting", enabled: true },
-    { desc: "Other Setting", enabled: false },
   ];
 
   return (

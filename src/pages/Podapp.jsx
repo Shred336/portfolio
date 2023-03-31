@@ -76,58 +76,60 @@ const PodApp = () => {
   }, [inputFeedUrl]);
 
   return (
-    <div className="App">
-      <h1>PodPlayer</h1>
-      <div>
-        <label htmlFor="quickfilter">Quick Filter:</label>
-        <input
-          id="quickfilter"
-          name="quickfilter"
-          value={quickFilter}
-          onChange={handleFilterChange}
-        />
-      </div>
-      <PodGrid
-        rssfeed={rssFeed}
-        quickFilter={quickFilter}
-        height="500px"
-        width="100%"
-      ></PodGrid>
-      <div id="rssInput">
-        <label htmlFor="rssFeedUrl">RSS FEED URL:</label>
-        <input
-          id="rssFeedUrl"
-          name="rssFeedUrl"
-          // onChange={handleLoadFeedClick}
-          onKeyUp={handleLoadFeedClick}
-          onKeyDown={checkKey}
-          defaultValue={rssFeed}
-          value={inputFeedUrl}
-          onChange={(event) => setInputFeedUrl(event.target.value)}
-          // onChange={handleLoadFeedClick}
-        />
-        <button onClick={handleLoadFeedClick}>Load Feed</button>
-        <button onClick={(event) => setInputFeedUrl(event.target.value)}>
-          Add to List
-        </button>
-
+    <Container>
+      <div className="App">
+        <h1>PodPlayer</h1>
         <div>
-          <label htmlFor="podcasts">Choose a podcast:</label>
-          <select
-            name="podcasts"
-            id="podcasts"
+          <label htmlFor="quickfilter">Quick Filter:</label>
+          <input
+            id="quickfilter"
+            name="quickfilter"
+            value={quickFilter}
+            onChange={handleFilterChange}
+          />
+        </div>
+        <PodGrid
+          rssfeed={rssFeed}
+          quickFilter={quickFilter}
+          height="500px"
+          width="100%"
+        ></PodGrid>
+        <div id="rssInput">
+          <label htmlFor="rssFeedUrl">RSS FEED URL:</label>
+          <input
+            id="rssFeedUrl"
+            name="rssFeedUrl"
+            onChange={{ setFeedUrls }}
+            onKeyUp={handleLoadFeedClick}
+            onKeyDown={checkKey}
+            defaultValue={rssFeed}
             value={inputFeedUrl}
             onChange={(event) => setInputFeedUrl(event.target.value)}
-          >
-            {feedUrls.map((feed) => (
-              <option value={feed.url} key={feed.url}>
-                {feed.name}
-              </option>
-            ))}
-          </select>
+            // onChange={handleLoadFeedClick}
+          />
+          <button onClick={handleLoadFeedClick}>Load Feed</button>
+          <button onClick={(event) => setInputFeedUrl(event.target.value)}>
+            Add to List
+          </button>
+
+          <div>
+            <label htmlFor="podcasts">Choose a podcast:</label>
+            <select
+              name="podcasts"
+              id="podcasts"
+              value={inputFeedUrl}
+              onChange={(event) => setInputFeedUrl(event.target.value)}
+            >
+              {feedUrls.map((feed) => (
+                <option value={feed.url} key={feed.url}>
+                  {feed.name}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 
