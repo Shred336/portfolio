@@ -3,6 +3,9 @@
   flex: 1;
   min-width: 100vw;
 }
+.body {
+  overflow: hidden;
+}
 
 .top-nav-inner {
   /* outline: 1px solid red; */

@@ -1,5 +1,5 @@
-import Solz from "./AlekSolz";
-import Container from "../Container/Container";
+import Container from "../../Bits/Container/Container";
+import Solz from "./AlekSolz.jsx";
 function BlackBox() {
   return (
     <Container>

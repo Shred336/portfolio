@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Container from "../components/Bits/Container/Container";
-function FlashCards() {
+
+function FlashPieceOne() {
   const [card, setCard] = useState("");
   const [answer, setAnswer] = useState(false);
 
@@ -44,4 +45,4 @@ function FlashCards() {
   );
 }
 
-export default FlashCards;
+export default FlashPieceOne;

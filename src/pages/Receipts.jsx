@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./Receipts.css";
+import "../theme/Receipts.css";
 import Container from "../components/Bits/Container/Container";
 
 const Receipts = () => {

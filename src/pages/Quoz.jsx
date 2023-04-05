@@ -1,4 +1,4 @@
-import BlackBox from "../components/Bits/QuoteGetter/Quote";
+import BlackBox from "../components/Pieces/QuoteGetter/Quote";
 function Quotes() {
   return <BlackBox />;
 }

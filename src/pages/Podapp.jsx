@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Container from "../components/Bits/Container/Container";
 import PodGrid from "./PodGrid";
-import "./PodApp.css";
+import "../theme/PodApp.css";
 const PodApp = () => {
   const [rssFeed, setRssFeed] = useState("");
   const [quickFilter, setQuickFilter] = useState("");
@@ -99,12 +99,15 @@ const PodApp = () => {
           <input
             id="rssFeedUrl"
             name="rssFeedUrl"
-            onChange={{ setFeedUrls }}
             onKeyUp={handleLoadFeedClick}
             onKeyDown={checkKey}
             defaultValue={rssFeed}
             value={inputFeedUrl}
-            onChange={(event) => setInputFeedUrl(event.target.value)}
+            // onChange={{ setFeedUrls }} {(event) => setInputFeedUrl(event.target.value)}
+            onChange={(event) => {
+              setFeedUrls(event.target.value);
+            }}
+            value={inputFeedUrl}
             // onChange={handleLoadFeedClick}
           />
           <button onClick={handleLoadFeedClick}>Load Feed</button>

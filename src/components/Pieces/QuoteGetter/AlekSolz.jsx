@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Container from "../Container/Container";
 function Solz() {
   const [quote, setQuote] = useState("");
 
